@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Examine HTTP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Examine HTTP</h1>
+  <h2>GET request without parameters</h2>
+  <p>
+    <a href="/api/exercise">Link</a>
+  </p>
+
+  <h2>GET request with query parameters</h2>
+  <p>
+    <a href="/api/exercise?name=Ky%C3%B6sti%20M%C3%A4ki-Mattila&occupation=singer&placeofbirth=Yl%C3%A4ne">Link</a>
+  </p>
+
+  <h2>Form with GET method</h2>
+  <form method="get" action="/api/exercise">
+    <p>
+      <label for="number1">First number:</label>
+      <input type="number" name="number1"><br>
+    </p>
+    <p>
+      <label for="number2">Second number:</label>
+      <input type="number" name="number2"><br>
+    </p>
+    <button name="submit" value="submit">Send numbers</button>
+  </form>
+
+  <h2>Form with POST method</h2>
+  <form method="post" action="/api/exercise">
+    <p>
+      <label for="firstname">Firstname:</label>
+      <input type="text" name="firstname">
+    </p>
+    <p>
+      <label for="lastname">Lastname:</label>
+      <input type="text" name="lastname">
+    </p>
+    <button name="submit" value="submit">Send your name</button>
+  </form>
+
+  <h2>Send another form with POST method</h2>
+  <form method="post" action="/api/exercise">
+    <p>
+      <label for="fruit">My favourite fruits:</label>
+    </p>
+    <p>
+      <select name="fruit" multiple>
+        <option value="apple">Apple</option>
+        <option value="orange">Orange</option>
+        <option value="banana">Banana</option>
+        <option value="kiwi">Kiwi</option>
+      </select>
+    </p>
+    <p>Respondent gender:</p>
+    <p>
+      <div>
+        <input type="radio" id="undisclosed" name="gender" value="undisclosed">
+        <label for="undisclosed">Don't want to disclose</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="female" value="female">
+        <label for="female">Female</label>
+      </div>
+    </p>
+    <button name="submit" value="submit">Submit your answer</button>
+    </p>
+  </form>
+
+  <h2>Login</h2>
+  <form method="POST" action="/api/login">
+    <p>
+      <label for="user">Name:</label>
+      <input type="text" name="user">
+    </p>
+    <p>
+      <label for="pwd">Password:</label>
+      <input type="password" name="pwd"><br>
+      <input type="hidden" name="action" value="login">
+    </p>
+    <button name="login" value="submit">Log in</button>
+  </form>
+
+</body>
+
+</html>
